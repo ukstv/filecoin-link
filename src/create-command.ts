@@ -19,7 +19,6 @@ export async function createCommand(
   });
   await ceramic.setDIDProvider(identityWallet.getDidProvider());
   const schemas = await publishSchemas({ ceramic, schemas: schemasList });
-  console.log('s', schemas)
   const idx = new IDX({ ceramic, schemas });
   await idx.authenticate();
   const accountLinksDefinition = await idx.createDefinition({
