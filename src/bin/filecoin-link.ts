@@ -1,6 +1,6 @@
 import program from "commander";
-import { createCommand } from "../create-command";
-import { listCommand } from "../list-command";
+import { createCommand } from "../commands/create-command";
+import { listCommand } from "../commands/list-command";
 
 program.version("0.0.1");
 
