@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@ceramicnetwork/ceramic-cli": "^0.5.11",
+    "@ceramicnetwork/ceramic-common": "^0.5.11",
     "@ceramicnetwork/ceramic-http-client": "^0.5.11",
     "@ceramicstudio/idx-schemas": "^0.1.5",
     "@ukstv/3id-blockchain-utils": "^1.1.0",

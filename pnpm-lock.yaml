@@ -1,5 +1,6 @@
 dependencies:
   '@ceramicnetwork/ceramic-cli': 0.5.11_52659195ca44cbc1b9ad74495630d34e
+  '@ceramicnetwork/ceramic-common': 0.5.11
   '@ceramicnetwork/ceramic-http-client': 'link:../../../../../../usr/local/pnpm-global/node_modules/@ceramicnetwork/ceramic-http-client'
   '@ceramicstudio/idx': 0.1.0
   '@ceramicstudio/idx-schemas': 0.1.5
@@ -11351,6 +11352,7 @@ packages:
       integrity: sha512-I6pv5b+eGE8CJFmltR+ILHnGcnBO8olV78VicQIaWulMhkomlwDmaMeMshJRLPcnd0FBs58QQVcVNBOT9ojH6Q==
 specifiers:
   '@ceramicnetwork/ceramic-cli': ^0.5.11
+  '@ceramicnetwork/ceramic-common': ^0.5.11
   '@ceramicnetwork/ceramic-http-client': ^0.5.11
   '@ceramicstudio/idx': ^0.1.0
   '@ceramicstudio/idx-schemas': ^0.1.5

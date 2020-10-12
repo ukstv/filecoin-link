@@ -1,10 +1,8 @@
 import CeramicClient from "@ceramicnetwork/ceramic-http-client";
 import IdentityWallet from "identity-wallet";
-import { LocalFilecoinProvider } from "@ukstv/local-filecoin-provider";
-import { AccountID } from "caip";
-import * as blockchainUtils from "@ukstv/3id-blockchain-utils";
 import { schemasList, publishSchemas } from "@ceramicstudio/idx-schemas";
 import { IDX } from "@ceramicstudio/idx";
+import { linkFilecoin } from "../link-filecoin";
 
 export async function createCommand(
   seed: string,
@@ -27,23 +25,17 @@ export async function createCommand(
   });
 
   try {
-    const isTestnet = network !== "f";
-    const provider = new LocalFilecoinProvider(privateKey, isTestnet);
-    const address = (await provider.getAccounts())[0];
-    const caipNetwork = isTestnet ? "fil:t" : "fil:f";
-    const account = new AccountID(`${address}@${caipNetwork}`);
     const did = identityWallet.id;
-    const linkProof = await blockchainUtils.createLink(did, account, provider);
-    const accountLinkDocument = await ceramic.createDocument(
-      "account-link",
-      { metadata: { owners: [linkProof.account] } },
-      { applyOnly: true }
+    const [accountLinkDocument, linkProof] = await linkFilecoin(
+      ceramic,
+      did,
+      network,
+      privateKey
     );
-    await accountLinkDocument.change({ content: linkProof });
     await idx.set(accountLinksDefinition, {
       [linkProof.account]: accountLinkDocument.id,
     });
-    console.log(`Linked ${address} to ${did}`);
+    console.log(`Linked ${linkProof.account} to ${did}`);
   } finally {
     await ceramic.close();
   }

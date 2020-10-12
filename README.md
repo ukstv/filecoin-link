@@ -6,6 +6,9 @@ Add Filecoin-related account-link to 3id IDX.
 
 ## Create Link
 
+Create `account-link` record for Filecoin address (derived from `filecoin-private-key`),
+and add it to 3id IDX.
+
 ```
 filecoin-link create <3id-seed> <filecoin-private-key>
 ```
@@ -20,6 +23,32 @@ Optionally, you could specify Filecoin network: `t` is for testnet, `f` is for m
 
 ```
 filecoin-link create <3id-seed> <filecoin-private-key> --network [t|f]
+```
+
+This would report:
+
+```
+Linked t17lxg2i2otnl7mmpw2ocd6o4e3b4un3272vny6ka to did:3:bafyreidadca3mmq33wtjcxnapojyjkodxdklvqm6jpanqsewnxxri4mhei
+```
+
+## Create Link Record
+
+Just create `account-link` record for Filecoin address (derived from `filecoin-private-key`).
+
+```
+filecoin-link create-record <3id-did> <filecoin-private-key>
+```
+
+For example:
+
+```
+filecoin-link create-record did:3:bafyreidadca3mmq33wtjcxnapojyjkodxdklvqm6jpanqsewnxxri4mhei 7b2254797065223a22736563703235366b31222c22507269766174654b6579223a2257587362654d5176487a366f5668344b637262633045642b31362b3150766a6a504f3753514931355031343d227d
+```
+
+Optionally, you could specify Filecoin network: `t` is for testnet, `f` is for mainnet.
+
+```
+filecoin-link create-record <3id-did> <filecoin-private-key> --network [t|f]
 ```
 
 This would report:
