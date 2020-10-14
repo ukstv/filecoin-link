@@ -21,6 +21,6 @@ export async function linkFilecoin(
     { metadata: { owners: [linkProof.account] } },
     { applyOnly: true }
   );
-  await accountLinkDocument.change({ content: linkProof });
+  await accountLinkDocument.change({ content: did });
   return [accountLinkDocument, linkProof];
 }
