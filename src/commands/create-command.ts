@@ -1,6 +1,6 @@
 import CeramicClient from "@ceramicnetwork/ceramic-http-client";
 import IdentityWallet from "identity-wallet";
-import { schemasList, publishSchemas } from "@ceramicstudio/idx-schemas";
+import * as idxTools from "@ceramicstudio/idx-tools";
 import { IDX } from "@ceramicstudio/idx";
 import { linkFilecoin } from "../link-filecoin";
 
@@ -15,15 +15,10 @@ export async function createCommand(
     seed: seed,
     ceramic: ceramic,
   });
+  const { definitions } = await idxTools.publishIDXConfig(ceramic);
   await ceramic.setDIDProvider(identityWallet.getDidProvider());
-  const schemas = await publishSchemas({ ceramic, schemas: schemasList });
-  const idx = new IDX({ ceramic, schemas });
+  const idx = new IDX({ ceramic, definitions });
   await idx.authenticate();
-  const accountLinksDefinition = await idx.createDefinition({
-    name: "Account Links",
-    schema: schemas.CryptoAccountLinks,
-  });
-
   try {
     const did = identityWallet.id;
     const [accountLinkDocument, linkProof] = await linkFilecoin(
@@ -32,7 +27,7 @@ export async function createCommand(
       network,
       privateKey
     );
-    await idx.set(accountLinksDefinition, {
+    await idx.set(definitions.cryptoAccountLinks, {
       [linkProof.account]: accountLinkDocument.id,
     });
     console.log(`Linked ${linkProof.account} to ${did}`);
