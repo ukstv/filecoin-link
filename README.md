@@ -81,3 +81,12 @@ For example, after the `filecoin-link create` call above `filecoin-link list` wo
   }
 }
 ```
+
+## Ceramic Connection
+
+The commands above connect to Ceramic node on `http://localhost:7007` by default. You could override that
+by specifying endpoint as `-c` or `--ceramic` option. For example:
+
+```shell script
+filecoin-link list bafyreidadca3mmq33wtjcxnapojyjkodxdklvqm6jpanqsewnxxri4mhei --ceramic http://other-host:7007
+```
