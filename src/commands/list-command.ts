@@ -3,8 +3,8 @@ import * as idxTools from "@ceramicstudio/idx-tools";
 import { IDX } from "@ceramicstudio/idx";
 import * as _ from "lodash";
 
-export async function listCommand(did: string) {
-  const ceramic = new CeramicClient();
+export async function listCommand(did: string, ceramicEndpoint?: string) {
+  const ceramic = new CeramicClient(ceramicEndpoint);
   const idx = new IDX({ ceramic });
   const { definitions } = await idxTools.publishIDXConfig(ceramic);
   const accountLinkDocuments = await idx.get<Record<string, string>>(

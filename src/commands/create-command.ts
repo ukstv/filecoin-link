@@ -7,9 +7,10 @@ import { linkFilecoin } from "../link-filecoin";
 export async function createCommand(
   seed: string,
   privateKey: string,
-  network: string
+  network: string,
+  ceramicEndpoint?: string
 ) {
-  const ceramic = new CeramicClient();
+  const ceramic = new CeramicClient(ceramicEndpoint);
   const identityWallet = await IdentityWallet.create({
     getPermission: async (rec) => (rec.payload.paths as unknown) as string[],
     seed: seed,

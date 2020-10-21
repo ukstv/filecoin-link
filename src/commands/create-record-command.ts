@@ -4,9 +4,10 @@ import { linkFilecoin } from "../link-filecoin";
 export async function createRecordCommand(
   did: string,
   network: string,
-  privateKey: string
+  privateKey: string,
+  ceramicEndpoint?: string
 ) {
-  const ceramic = new CeramicClient();
+  const ceramic = new CeramicClient(ceramicEndpoint);
   const [accountLinkDocument] = await linkFilecoin(
     ceramic,
     did,
