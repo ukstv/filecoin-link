@@ -90,3 +90,7 @@ by specifying endpoint as `-c` or `--ceramic` option. For example:
 ```shell script
 filecoin-link list bafyreidadca3mmq33wtjcxnapojyjkodxdklvqm6jpanqsewnxxri4mhei --ceramic http://other-host:7007
 ```
+
+# License
+
+Dual licensed under [Apache-2.0](https://opensource.org/licenses/Apache-2.0) or [MIT](https://opensource.org/licenses/MIT).
