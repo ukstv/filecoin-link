@@ -1,26 +1,30 @@
-import { LocalFilecoinProvider } from "@ukstv/local-filecoin-provider";
+import { LocalManagedProvider } from "@glif/local-managed-provider";
 import { AccountID } from "caip";
-import * as blockchainUtils from "@ukstv/3id-blockchain-utils";
-import { CeramicApi, Doctype } from "@ceramicnetwork/ceramic-common";
-import { LinkProof } from "@ukstv/3id-blockchain-utils";
+import type { LinkProof } from "3id-blockchain-utils";
+import * as blockchainUtils from "3id-blockchain-utils";
+import { CeramicApi, Doctype } from "@ceramicnetwork/common";
+import { Network } from "@glif/filecoin-address";
 
 export async function linkFilecoin(
   ceramic: CeramicApi,
   did: string,
-  network: string,
+  network: Network,
   privateKey: string
 ): Promise<[Doctype, LinkProof]> {
-  const isTestnet = network !== "f";
-  const provider = new LocalFilecoinProvider(privateKey, isTestnet);
+  const provider = new LocalManagedProvider(privateKey, network);
   const address = (await provider.getAccounts())[0];
+  const isTestnet = network !== Network.TEST;
   const caipNetwork = isTestnet ? "fil:t" : "fil:f";
   const account = new AccountID(`${address}@${caipNetwork}`);
   const linkProof = await blockchainUtils.createLink(did, account, provider);
   const accountLinkDocument = await ceramic.createDocument(
     "account-link",
-    { metadata: { owners: [linkProof.account] } },
-    { applyOnly: true }
+    { metadata: { controllers: [linkProof.account] } },
+    { publish: false, anchor: false }
   );
-  await accountLinkDocument.change({ content: linkProof });
+  await accountLinkDocument.change(
+    { content: linkProof },
+    { anchor: true, publish: true }
+  );
   return [accountLinkDocument, linkProof];
 }

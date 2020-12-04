@@ -1,10 +1,11 @@
-import CeramicClient from "@ceramicnetwork/ceramic-http-client";
+import CeramicClient from "@ceramicnetwork/http-client";
 import { linkFilecoin } from "../link-filecoin";
+import { Network } from "@glif/filecoin-address";
 
 export async function createRecordCommand(
   did: string,
-  network: string,
   privateKey: string,
+  network: Network,
   ceramicEndpoint?: string
 ) {
   const ceramic = new CeramicClient(ceramicEndpoint);
