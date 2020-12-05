@@ -6,8 +6,9 @@ dependencies:
   '@ceramicnetwork/http-client': 0.8.5
   '@ceramicstudio/idx': 0.4.2
   '@ceramicstudio/idx-tools': 0.4.1
-  '@glif/filecoin-address': 1.1.0-beta.4
-  '@glif/local-managed-provider': 1.1.0-beta.4
+  '@glif/filecoin-address': 1.1.0-beta.7
+  '@glif/filecoin-wallet-provider': 1.1.0-beta.7
+  '@glif/local-managed-provider': 1.1.0-beta.7
   '@zondax/filecoin-signing-tools': 0.13.0
   caip: 0.9.2
   commander: 6.2.0
@@ -874,7 +875,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-XA3ycFltVrCTQt04w5nHu3Xq5Z6HjqWsXaAYQHFdqtugyUsIumaO9S5MOwFFuUYTNkZUoT3jCRa/OBS+K4tLfA==
-  /@glif/filecoin-address/1.1.0-beta.4:
+  /@glif/filecoin-address/1.1.0-beta.7:
     dependencies:
       blakejs: 1.1.0
       borc: 2.1.1
@@ -882,51 +883,51 @@ packages:
       uint8arrays: 1.1.0
     dev: false
     resolution:
-      integrity: sha512-cC/1IBxeufgBL0QEkYTtnJvGd8ZX6aVIn6+9LyyYTBSe1g77yS7DiTzdQWWwOyd2gMkZnR9oqIoCRG2dGDXnYA==
-  /@glif/filecoin-message/1.1.0-beta.4:
+      integrity: sha512-UGGAuDuTO1LKm1D00ix7/gOZC49GhN8Gy7Xaar6E3iinOxT5pxII1xgkBxPIFnPRt1qaUqyn26NbWet+psub7g==
+  /@glif/filecoin-message/1.1.0-beta.7:
     dependencies:
-      '@glif/filecoin-address': 1.1.0-beta.4
+      '@glif/filecoin-address': 1.1.0-beta.7
       bignumber.js: 9.0.1
     dev: false
     resolution:
-      integrity: sha512-AAKhwwX1X4RfM75YrmFfbv6FMDeStQQA7pFdn0D0+sKInqUJqWq1+LgowD/PhBcOps1Mo6RVAFj0u5JYCVxyVw==
-  /@glif/filecoin-number/1.1.0-beta.2:
+      integrity: sha512-FTBXAGl8D7P2JQQTG3gVBEXFpWsC885T8SVBAF6MXYxswyja1GCf1uu0zhlqLMPDGtQfIPbqfn4zCgnTEksehQ==
+  /@glif/filecoin-number/1.1.0-beta.7:
     dependencies:
       '@babel/polyfill': 7.7.0
       bent: 7.3.12
       bignumber.js: 9.0.1
     dev: false
     resolution:
-      integrity: sha512-3rpiIYEJlnN384orFO/qd3lgMf6Kl2SCbAeO3jTKwk74s4qtkuYLvMfBqCsf2aT17vE8kH5jwkyHilaLnnUYbw==
-  /@glif/filecoin-rpc-client/1.1.0-beta.1:
+      integrity: sha512-UzPfjFNaa7dFJo00kGLHSCUKEYzh+S1rcrscBGmbZ1/i9SGJh5A9pm8v9Vpy2MTk1w8DWK/dYC9Frb9tXOwDeQ==
+  /@glif/filecoin-rpc-client/1.1.0-beta.7:
     dependencies:
       '@babel/runtime': 7.12.5
       axios: 0.21.0
     dev: false
     resolution:
-      integrity: sha512-FQn01H3uV6Y0FW6PKyDXiK5awRol/2Vg1FB4Wk0AfDiQ6LQAw2zBj6g312FzWZ61AMJFM0lH5MT3RITI9Rb8bw==
-  /@glif/filecoin-wallet-provider/1.1.0-beta.4:
+      integrity: sha512-YNRCGMFDDP1xTzCK/O7mDqFtOt7YC+BVrmb5yJqc5LUJ/GcZkJqf53r+SafKxtsEr0P5A/ZrLrnn9FmfAw0hmQ==
+  /@glif/filecoin-wallet-provider/1.1.0-beta.7:
     dependencies:
       '@babel/polyfill': 7.8.7
-      '@glif/filecoin-address': 1.1.0-beta.4
-      '@glif/filecoin-message': 1.1.0-beta.4
-      '@glif/filecoin-number': 1.1.0-beta.2
-      '@glif/filecoin-rpc-client': 1.1.0-beta.1
+      '@glif/filecoin-address': 1.1.0-beta.7
+      '@glif/filecoin-message': 1.1.0-beta.7
+      '@glif/filecoin-number': 1.1.0-beta.7
+      '@glif/filecoin-rpc-client': 1.1.0-beta.7
       bignumber.js: 9.0.1
     dev: false
     resolution:
-      integrity: sha512-ON97dg9yXaXfyqlI2304mozYX5pUkuvpmmcB9f4CcgcOKY+TmNxDZ6P4tHD7FfRFWJeWGvHThC3SxBVaLAed6A==
-  /@glif/local-managed-provider/1.1.0-beta.4:
+      integrity: sha512-aPH0my6GyyN0qpzPh5HfUpTdS43VF2cMXBFllA+AOjcTxAgkIg6bU2JwjxXQ65D/IZI2LEa/yYdOhAms50/oaQ==
+  /@glif/local-managed-provider/1.1.0-beta.7:
     dependencies:
-      '@glif/filecoin-address': 1.1.0-beta.4
-      '@glif/filecoin-message': 1.1.0-beta.4
-      '@glif/filecoin-wallet-provider': 1.1.0-beta.4
+      '@glif/filecoin-address': 1.1.0-beta.7
+      '@glif/filecoin-message': 1.1.0-beta.7
+      '@glif/filecoin-wallet-provider': 1.1.0-beta.7
       '@zondax/filecoin-signing-tools': 0.12.0
       bignumber.js: 9.0.1
       uint8arrays: 1.1.0
     dev: false
     resolution:
-      integrity: sha512-9MizyEa8i923OSPoqCj9M7ZwKN4wb1QyNPZNtin2lH02Vomik7FPgiFuKKs8TzW8CvZtIgXT6Djo20N0+BYNqA==
+      integrity: sha512-/yNIi5tVx7Z2RRuT4u9pDA1jwkMnpDwgZ1cFXjzxioFjAs6Cmf+sSFU5LImSutQNjktULGNlwI64KYqS9WwUsQ==
   /@hapi/accept/5.0.1:
     dependencies:
       '@hapi/boom': 9.1.0
@@ -2610,7 +2611,7 @@ packages:
       bignumber.js: 9.0.1
       buffer: 5.6.0
       commander: 2.20.3
-      ieee754: 1.1.13
+      ieee754: 1.2.1
       iso-url: 0.4.7
       json-text-sequence: 0.1.1
       readable-stream: 3.6.0
@@ -2712,7 +2713,7 @@ packages:
   /buffer/5.6.0:
     dependencies:
       base64-js: 1.3.1
-      ieee754: 1.1.13
+      ieee754: 1.2.1
     dev: false
     resolution:
       integrity: sha512-/gDYp/UtU0eA1ys8bOs9J6a+E/KWIY+DZ+Q2WESNUA0jFRsJOc0SNUO6xJ5SGA1xueg3NL65W6s+NY5l9cunuw==
@@ -4426,10 +4427,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-2y91h5OpQlolefMPmUlivelittSWy0rP+oYVpn6A7GwVHNE8AWzoYOBNmlwks3LobaJxgHCYZAnyNo2GgpNRNQ==
-  /ieee754/1.1.13:
-    dev: false
-    resolution:
-      integrity: sha512-4vf7I2LYV/HaWerSo3XmlMkp5eZ83i+/CDluXi/IGTs/O1sejBNhTtnxzmRZfvOUqj7lZjqHkeTvpgSFDlWZTg==
   /ieee754/1.2.1:
     dev: false
     resolution:
@@ -10258,8 +10255,9 @@ specifiers:
   '@ceramicnetwork/http-client': ^0.8.5
   '@ceramicstudio/idx': ^0.4.2
   '@ceramicstudio/idx-tools': ^0.4.1
-  '@glif/filecoin-address': ^1.1.0-beta.4
-  '@glif/local-managed-provider': ^1.1.0-beta.4
+  '@glif/filecoin-address': ^1.1.0-beta.7
+  '@glif/filecoin-wallet-provider': ^1.1.0-beta.7
+  '@glif/local-managed-provider': ^1.1.0-beta.7
   '@types/debug': ^4.1.5
   '@types/jest': ^26.0.16
   '@types/lodash': ^4.14.165

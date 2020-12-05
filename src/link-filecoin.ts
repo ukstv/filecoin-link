@@ -1,21 +1,18 @@
-import { LocalManagedProvider } from "@glif/local-managed-provider";
 import { AccountID } from "caip";
 import type { LinkProof } from "3id-blockchain-utils";
 import * as blockchainUtils from "3id-blockchain-utils";
 import { CeramicApi, Doctype } from "@ceramicnetwork/common";
-import { Network } from "@glif/filecoin-address";
+import { WalletSubProvider } from "@glif/filecoin-wallet-provider";
 
 export async function linkFilecoin(
   ceramic: CeramicApi,
   did: string,
-  network: Network,
-  privateKey: string
+  filecoinAddress: string,
+  provider: WalletSubProvider
 ): Promise<[Doctype, LinkProof]> {
-  const provider = new LocalManagedProvider(privateKey, network);
-  const address = (await provider.getAccounts())[0];
-  const isTestnet = network !== Network.TEST;
+  const isTestnet = filecoinAddress.startsWith("t");
   const caipNetwork = isTestnet ? "fil:t" : "fil:f";
-  const account = new AccountID(`${address}@${caipNetwork}`);
+  const account = new AccountID(`${filecoinAddress}@${caipNetwork}`);
   const linkProof = await blockchainUtils.createLink(did, account, provider);
   const accountLinkDocument = await ceramic.createDocument(
     "caip10-link",

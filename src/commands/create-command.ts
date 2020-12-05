@@ -1,9 +1,9 @@
 import CeramicClient from "@ceramicnetwork/http-client";
 import ThreeProvider from "3id-did-provider";
-import * as idxTools from "@ceramicstudio/idx-tools";
 import { IDX } from "@ceramicstudio/idx";
-import { linkFilecoin } from "../link-filecoin";
 import { Network } from "@glif/filecoin-address";
+import { LocalManagedProvider } from "@glif/local-managed-provider";
+import { addFilecoinLink } from "../add-filecoin-link";
 
 export async function createCommand(
   seed: Uint8Array,
@@ -17,23 +17,13 @@ export async function createCommand(
     seed: seed,
     ceramic: ceramic,
   });
-  const { definitions } = await idxTools.publishIDXConfig(ceramic);
   await ceramic.setDIDProvider(identityWallet.getDidProvider());
   const idx = new IDX({ ceramic });
   await idx.authenticate();
   try {
-    const did = idx.did.id;
-    const [accountLinkDocument, linkProof] = await linkFilecoin(
-      ceramic,
-      did,
-      network,
-      privateKey
-    );
-    await idx.set(definitions.cryptoAccounts, {
-      [linkProof.account]: accountLinkDocument.id.toUrl(),
-    });
-    await idx.getIDXContent(did)
-    console.log(`Linked ${linkProof.account} to ${did}`);
+    const provider = new LocalManagedProvider(privateKey, network);
+    const linkProof = await addFilecoinLink(idx, provider);
+    console.log(`Linked ${linkProof.account} to ${idx.did.id}`);
   } finally {
     await ceramic.close();
   }
