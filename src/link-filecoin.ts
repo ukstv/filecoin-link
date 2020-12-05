@@ -18,7 +18,7 @@ export async function linkFilecoin(
   const account = new AccountID(`${address}@${caipNetwork}`);
   const linkProof = await blockchainUtils.createLink(did, account, provider);
   const accountLinkDocument = await ceramic.createDocument(
-    "account-link",
+    "caip10-link",
     { metadata: { controllers: [linkProof.account] } },
     { publish: false, anchor: false }
   );

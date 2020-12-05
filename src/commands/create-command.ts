@@ -22,7 +22,7 @@ export async function createCommand(
   const idx = new IDX({ ceramic });
   await idx.authenticate();
   try {
-    const did = identityWallet.id;
+    const did = idx.did.id;
     const [accountLinkDocument, linkProof] = await linkFilecoin(
       ceramic,
       did,
@@ -30,8 +30,9 @@ export async function createCommand(
       privateKey
     );
     await idx.set(definitions.cryptoAccounts, {
-      [linkProof.account]: accountLinkDocument.id,
+      [linkProof.account]: accountLinkDocument.id.toUrl(),
     });
+    await idx.getIDXContent(did)
     console.log(`Linked ${linkProof.account} to ${did}`);
   } finally {
     await ceramic.close();

@@ -13,7 +13,8 @@
     "ceramic",
     "3id",
     "3box",
-    "account-link",
+    "caip10-link",
+    "caip10",
     "idx"
   ],
   "author": "Sergey Ukustov <sergey@ukstv.me>",

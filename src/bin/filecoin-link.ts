@@ -9,7 +9,7 @@ program.version("0.0.1");
 
 program
   .command("create <seed> <private-key>")
-  .option("-n, --network <t>", "f")
+  .option("-n, --network <t>", "Filecoin network: t for test, f for main", "f")
   .option("-c, --ceramic <url>")
   .action(
     async (
@@ -25,7 +25,7 @@ program
 
 program
   .command("create-record <3id-did> <private-key>")
-  .option("-n, --network <t>", "f")
+  .option("-n, --network <t>", "Filecoin network: t for test, f for main", "f")
   .option("-c, --ceramic <url>")
   .action(
     async (
