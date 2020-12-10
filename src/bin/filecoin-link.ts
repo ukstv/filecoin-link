@@ -7,10 +7,16 @@ import { networkFromString } from "../network-from-string";
 
 program.version("0.0.1");
 
+const DEFAULT_CERAMIC_ENDPOINT = "http://ceramic.ukstv.me";
+
 program
   .command("create <seed> <private-key>")
   .option("-n, --network <t>", "Filecoin network: t for test, f for main", "f")
-  .option("-c, --ceramic <url>")
+  .option(
+    "-c, --ceramic <url>",
+    "Ceramic node endpoint",
+    DEFAULT_CERAMIC_ENDPOINT
+  )
   .action(
     async (
       seed: string,
@@ -26,7 +32,11 @@ program
 program
   .command("create-record <3id-did> <private-key>")
   .option("-n, --network <t>", "Filecoin network: t for test, f for main", "f")
-  .option("-c, --ceramic <url>")
+  .option(
+    "-c, --ceramic <url>",
+    "Ceramic node endpoint",
+    DEFAULT_CERAMIC_ENDPOINT
+  )
   .action(
     async (
       seed: string,
@@ -40,7 +50,11 @@ program
 
 program
   .command("list <did>")
-  .option("-c, --ceramic <url>")
+  .option(
+    "-c, --ceramic <url>",
+    "Ceramic node endpoint",
+    DEFAULT_CERAMIC_ENDPOINT
+  )
   .action(async (did, command) => {
     await listCommand(did, command.ceramic);
   });

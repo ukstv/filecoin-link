@@ -1,14 +1,14 @@
 dependencies:
-  3id-blockchain-utils: 1.1.1
-  3id-did-provider: 0.1.1
-  '@ceramicnetwork/cli': 0.16.0
-  '@ceramicnetwork/common': 0.14.0
-  '@ceramicnetwork/http-client': 0.8.5
+  3id-blockchain-utils: 1.2.0
+  3id-did-provider: 0.1.2
+  '@ceramicnetwork/cli': 0.16.2
+  '@ceramicnetwork/common': 0.14.1
+  '@ceramicnetwork/http-client': 0.8.7
   '@ceramicstudio/idx': 0.4.2
-  '@ceramicstudio/idx-tools': 0.4.1
+  '@ceramicstudio/idx-tools': 0.4.2
   '@glif/filecoin-address': 1.1.0-beta.7
-  '@glif/filecoin-wallet-provider': 1.1.0-beta.7
-  '@glif/local-managed-provider': 1.1.0-beta.7
+  '@glif/filecoin-wallet-provider': 1.1.0-beta.8
+  '@glif/local-managed-provider': 1.1.0-beta.8
   '@zondax/filecoin-signing-tools': 0.13.0
   caip: 0.9.2
   commander: 6.2.0
@@ -16,49 +16,51 @@ dependencies:
   lodash: 4.17.20
 devDependencies:
   '@types/debug': 4.1.5
-  '@types/jest': 26.0.16
+  '@types/jest': 26.0.18
   '@types/lodash': 4.14.165
-  jest: 26.6.3_ts-node@9.1.0
+  jest: 26.6.3_ts-node@9.1.1
   prettier: 2.2.1
   ts-jest: 26.4.4_jest@26.6.3+typescript@4.1.2
-  ts-node: 9.1.0_typescript@4.1.2
+  ts-node: 9.1.1_typescript@4.1.2
   typescript: 4.1.2
 lockfileVersion: 5.2
 packages:
-  /3id-blockchain-utils/1.1.1:
+  /3id-blockchain-utils/1.2.0:
     dependencies:
-      '@babel/runtime': 7.12.1
+      '@babel/runtime': 7.12.5
       '@ethersproject/contracts': 5.0.5
       '@ethersproject/providers': 5.0.12
-      '@ethersproject/wallet': 5.0.5
+      '@ethersproject/wallet': 5.0.9
       caip: 0.9.2
       js-sha256: 0.9.0
       uint8arrays: 1.1.0
     dev: false
     optionalDependencies:
+      '@polkadot/util-crypto': 3.7.1
       '@zondax/filecoin-signing-tools': 0.12.0
     resolution:
-      integrity: sha512-CvgTSBNGJpKyG/vUVaauqrxaonuBanw213VjMRCa1N9owfCanvcoSt4rnqvpjspBDu6Fb1gkOpq5txhRz+owbw==
-  /3id-did-provider/0.1.1:
+      integrity: sha512-Uq7gJm7LvIIGy3QB6mL05jpdyioUY93KR58pC2KPyiCaIAJCcyPR7PPP0/qhFD1EHTc7FIDWGJbFmCvdrDSUqg==
+  /3id-did-provider/0.1.2:
     dependencies:
-      3id-blockchain-utils: 1.1.1
-      '@babel/runtime': 7.12.1
-      '@ceramicnetwork/http-client': 0.8.5
+      3id-blockchain-utils: 1.2.0
+      '@babel/runtime': 7.12.5
+      '@ceramicnetwork/http-client': 0.8.7
       '@ceramicstudio/idx-constants': 0.4.0
       '@ethersproject/hdnode': 5.0.5
       '@ethersproject/wallet': 5.0.9
       '@stablelib/random': 1.0.0
       '@stablelib/x25519': 1.0.0
       caip: 0.9.2
+      cids: 1.0.2
       dag-jose-utils: 0.1.0
-      did-jwt: 4.6.2
+      did-jwt: 4.7.0
       fast-json-stable-stringify: 2.1.0
       rpc-utils: 0.1.3
       store: 2.0.12
       uint8arrays: 1.1.0
     dev: false
     resolution:
-      integrity: sha512-1w7yxtTzVPebJoOMN1ugV+pzKiSvKfJZ4bcHjyj/Y0mOGphg60Ii36TuaXc66nQ8+/sgtcDnGzpqNJPP6eETfA==
+      integrity: sha512-GfBH3fNc1FpCyOhhR6zrmK89X6VZkoqwKG3BQYOCojAa01/eBlBLCeFSQ/PRf6KQhn8zAiomtyk66WkI7gNTtw==
   /@achingbrain/electron-fetch/1.7.2:
     dependencies:
       encoding: 0.1.13
@@ -324,12 +326,6 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-XWcmseMIncOjoydKZnWvWi0/5CUCD+ZYKhRwgYlWOrA8fGZ/FjuLRpqtIhLOVD/fvR1b9DQHtZPn68VvhpYf+Q==
-  /@babel/runtime/7.12.1:
-    dependencies:
-      regenerator-runtime: 0.13.7
-    dev: false
-    resolution:
-      integrity: sha512-J5AIf3vPj3UwXaAzb5j1xM4WAQDX3EMgemF8rjCP3SoW09LfRKAXQKt6CoVYl230P6iWdRcBbnLDDdnqWxZSCA==
   /@babel/runtime/7.12.5:
     dependencies:
       regenerator-runtime: 0.13.7
@@ -367,24 +363,24 @@ packages:
     dev: true
     resolution:
       integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
-  /@ceramicnetwork/3id-did-resolver/0.5.3:
+  /@ceramicnetwork/3id-did-resolver/0.5.4:
     dependencies:
-      '@ceramicnetwork/common': 0.14.0
+      '@ceramicnetwork/common': 0.14.1
       '@ceramicnetwork/docid': 0.3.0
       cids: 1.0.2
       cross-fetch: 3.0.6
       uint8arrays: 1.1.0
     dev: false
     resolution:
-      integrity: sha512-wGIrdE5fb5PZcsTmd8ULiiHeXQBQMN0JE2NalP+asbR9hzEFpFRu1KJxros0iOSP2h3Ds+U1b+u1koMxbiV4XQ==
-  /@ceramicnetwork/cli/0.16.0:
+      integrity: sha512-/GuyiBYW9msBDEPLT7TLeM5ehsdrHN3yFfYGjB+Or3CITWxyO4Dr5gDGgDsEjg+tYsin1Ebdt94R4IWT6hUI5w==
+  /@ceramicnetwork/cli/0.16.2:
     dependencies:
       '@babel/register': 7.12.1
-      '@ceramicnetwork/common': 0.14.0
-      '@ceramicnetwork/core': 0.16.0
+      '@ceramicnetwork/common': 0.14.1
+      '@ceramicnetwork/core': 0.16.2
       '@ceramicnetwork/docid': 0.3.0
-      '@ceramicnetwork/doctype-tile': 0.12.1
-      '@ceramicnetwork/http-client': 0.8.5
+      '@ceramicnetwork/doctype-tile': 0.12.3
+      '@ceramicnetwork/http-client': 0.8.7
       '@stablelib/random': 1.0.0
       '@zondax/filecoin-signing-tools': 0.13.0
       bs58: 4.0.1
@@ -401,8 +397,8 @@ packages:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-o1riIhL3NHs0Zp/cC1azsQAMgQviwkPRnu09ub6I7ZJObrm5m+AgmEl4IJnhwdGibuztxbKhcGxuPeKZNE0H/A==
-  /@ceramicnetwork/common/0.14.0:
+      integrity: sha512-GtTvldFpuS9z+9eR3vZtNZPWOZ5SEQ2dNofM/Emkvb9JihWV2sIq8jKnrdfJUzO5hU+ogL6OFZBQeadReGiyKw==
+  /@ceramicnetwork/common/0.14.1:
     dependencies:
       '@ceramicnetwork/docid': 0.3.0
       cids: 1.0.2
@@ -414,17 +410,17 @@ packages:
       uint8arrays: 1.1.0
     dev: false
     resolution:
-      integrity: sha512-a9wlmpd9L1dZE2QVqj7DWc/EGKIMcJbQFOAFoYghvq/507EDBXO3vBRUCrgRG3VqDf9KeuVdJef7nT+DOAHqkQ==
-  /@ceramicnetwork/core/0.16.0:
+      integrity: sha512-x6x/jbybiUu3bTawdgida0Dq8eiS+xtjmyZGMwdlUa3WbVAIKTPjT7ycTqwQPTQi49TZznADpvP4UCdeZdfGvA==
+  /@ceramicnetwork/core/0.16.2:
     dependencies:
-      '@ceramicnetwork/3id-did-resolver': 0.5.3
-      '@ceramicnetwork/common': 0.14.0
+      '@ceramicnetwork/3id-did-resolver': 0.5.4
+      '@ceramicnetwork/common': 0.14.1
       '@ceramicnetwork/docid': 0.3.0
-      '@ceramicnetwork/doctype-caip10-link': 0.12.0
-      '@ceramicnetwork/doctype-tile': 0.12.1
-      '@ceramicnetwork/key-did-resolver': 0.2.0
-      '@ceramicnetwork/pinning-aggregation': 0.1.3
-      '@ceramicnetwork/pinning-ipfs-backend': 0.1.3
+      '@ceramicnetwork/doctype-caip10-link': 0.12.1
+      '@ceramicnetwork/doctype-tile': 0.12.3
+      '@ceramicnetwork/key-did-resolver': 0.2.1
+      '@ceramicnetwork/pinning-aggregation': 0.1.4
+      '@ceramicnetwork/pinning-ipfs-backend': 0.1.4
       '@ethersproject/base64': 5.0.4
       '@ethersproject/providers': 5.0.12
       '@ethersproject/random': 5.0.4
@@ -444,7 +440,7 @@ packages:
       typestub-multihashes: 0.0.4
     dev: false
     resolution:
-      integrity: sha512-jra1SmFHenmypYCIGFf40QQyESzn8TipBzFvIejjPLOhB8wP8IAXJ56QGfdEnoU30tKGsO5LBcGUrq2A6mmS7w==
+      integrity: sha512-6OoxG65pzy9dvLlKCAPNYPmQhixwh0vDNL59dhqs/s/gwUUn60dzoibfkFvG9HvTCGFDljkFxhWYKqOTo28Uuw==
   /@ceramicnetwork/docid/0.3.0:
     dependencies:
       cids: 1.0.2
@@ -453,19 +449,19 @@ packages:
     dev: false
     resolution:
       integrity: sha512-o9sDp0u44H+UyGONDQwEbvR0FL9AdDJmTyoJTr9DpMJVAbgEtDZ7LR4C5iDN2zfLUzaw4S7k9d7JuvZBbn2FUQ==
-  /@ceramicnetwork/doctype-caip10-link/0.12.0:
+  /@ceramicnetwork/doctype-caip10-link/0.12.1:
     dependencies:
-      3id-blockchain-utils: 1.1.1
-      '@ceramicnetwork/common': 0.14.0
+      3id-blockchain-utils: 1.2.0
+      '@ceramicnetwork/common': 0.14.1
       '@types/lodash.clonedeep': 4.5.6
       cids: 1.0.2
     dev: false
     resolution:
-      integrity: sha512-aEyAIyw6SwGCD4KmNG1IoMLiru6sfcMTZuqBxvJVz+hYmdivuHWeKFuIbpbmFyzBTFMqcyzQSidg5WkKitsuWQ==
-  /@ceramicnetwork/doctype-tile/0.12.1:
+      integrity: sha512-+fIGe+B3uoAQPjrS+zg8J0Y1MsmfqoSQbZVUFa6yFVWhZUZS7CdYL5WmEDzv6YO0tVBTYx5tvPielsPOElyV9A==
+  /@ceramicnetwork/doctype-tile/0.12.3:
     dependencies:
-      '@ceramicnetwork/common': 0.14.0
-      '@ceramicnetwork/key-did-resolver': 0.2.0
+      '@ceramicnetwork/common': 0.14.1
+      '@ceramicnetwork/key-did-resolver': 0.2.1
       '@ethersproject/base64': 5.0.4
       '@ethersproject/random': 5.0.4
       '@types/lodash.clonedeep': 4.5.6
@@ -478,15 +474,15 @@ packages:
       fast-json-stable-stringify: 2.1.0
     dev: false
     resolution:
-      integrity: sha512-Jzo+/s9yHBij82dOkcPTi3pAfILBJNxCotHH7LFDic06r8hamwSbJHmZCmtIy9YWykjwlEryNYVUvBxeb8yG3w==
-  /@ceramicnetwork/http-client/0.8.5:
+      integrity: sha512-dWlKSN4WGKfAwcE/bXe3ssRXyxNkwapYaI2EN2uarTplt4OXiUWiz8sMY1yhL/U3DRZKwaYiABO4V92AujthNQ==
+  /@ceramicnetwork/http-client/0.8.7:
     dependencies:
-      '@ceramicnetwork/3id-did-resolver': 0.5.3
-      '@ceramicnetwork/common': 0.14.0
+      '@ceramicnetwork/3id-did-resolver': 0.5.4
+      '@ceramicnetwork/common': 0.14.1
       '@ceramicnetwork/docid': 0.3.0
-      '@ceramicnetwork/doctype-caip10-link': 0.12.0
-      '@ceramicnetwork/doctype-tile': 0.12.1
-      '@ceramicnetwork/key-did-resolver': 0.2.0
+      '@ceramicnetwork/doctype-caip10-link': 0.12.1
+      '@ceramicnetwork/doctype-tile': 0.12.3
+      '@ceramicnetwork/key-did-resolver': 0.2.1
       cids: 1.0.2
       cross-fetch: 3.0.6
       did-resolver: 2.1.1
@@ -494,8 +490,8 @@ packages:
       lodash.clonedeep: 4.5.0
     dev: false
     resolution:
-      integrity: sha512-ooLsfPjB2X9vh8CPGJxeeklA8qLFP0VYinlcxHY2sPb5PSN0fE3ukp27afCxexgwDzA9uiJOJRcM4aj5TxtTBg==
-  /@ceramicnetwork/key-did-resolver/0.2.0:
+      integrity: sha512-Jgx/kAa44VUmrLBM8hwhFrKCdJtqnhmRKcvmGXEVVspZKyr7NZ6X+R21WYWjVKvWdimTNBUPGcA5DhlWp+qQVw==
+  /@ceramicnetwork/key-did-resolver/0.2.1:
     dependencies:
       '@stablelib/ed25519': 1.0.1
       multibase: 3.0.1
@@ -503,44 +499,44 @@ packages:
       varint: 6.0.0
     dev: false
     resolution:
-      integrity: sha512-wQFgO/ZPkUV2SUECJrn/XsjkYPlZHG4Jse7CYza1xLExgn7yQmJuKSuWSbf0Xvt+CvXy6SamOgsYZ9d/lnZT2Q==
-  /@ceramicnetwork/pinning-aggregation/0.1.3:
+      integrity: sha512-FAxBLJ+m/nb0TrtxxeWxQdqQQMgsn9svWekA02ZiDU0tZanJ//a1lJeqMfJ7ORyXvQU2DJ+FYv1bOlo/1RxhtQ==
+  /@ceramicnetwork/pinning-aggregation/0.1.4:
     dependencies:
-      '@ceramicnetwork/common': 0.14.0
-      '@ceramicnetwork/pinning-ipfs-backend': 0.1.3
-      '@ceramicnetwork/pinning-powergate-backend': 0.1.3
+      '@ceramicnetwork/common': 0.14.1
+      '@ceramicnetwork/pinning-ipfs-backend': 0.1.4
+      '@ceramicnetwork/pinning-powergate-backend': 0.1.4
       '@stablelib/base64': 1.0.0
       '@stablelib/sha256': 1.0.0
       cids: 1.0.2
     dev: false
     resolution:
-      integrity: sha512-A7ePpxOdDY9PshkBUB/6pjDJGcK9jKhmXFXkQ5Z28cSck2w2q2da+dSrefJ49Nlp/RLYWMp9E5qHp7lKqYfwEg==
-  /@ceramicnetwork/pinning-ipfs-backend/0.1.3:
+      integrity: sha512-totjKBrIxm7FlkR7cOjcpnmfqvOG95fySJEepQrtiZYsvyC647TrmbhaHh/jYDvHYdvb7xjWpf54zc2Ofn2kjQ==
+  /@ceramicnetwork/pinning-ipfs-backend/0.1.4:
     dependencies:
-      '@ceramicnetwork/common': 0.14.0
+      '@ceramicnetwork/common': 0.14.1
       '@stablelib/base64': 1.0.0
       '@stablelib/sha256': 1.0.0
       ipfs-http-client: 48.1.2
     dev: false
     resolution:
-      integrity: sha512-yM06TEiltsBV+AzY89GR9GPUnLpz+2+dYuBzRCPkVuObamc37EmEazHHBoNW0XBUOTZ2Dl2SDkuZT697tPiviw==
-  /@ceramicnetwork/pinning-powergate-backend/0.1.3:
+      integrity: sha512-NXStyXlmLHbo9ciXy9u+u9/a3LXnmdRKOqvtCRASU3D3Rve3qJywC1030AMpZ8lPrR9dXs1mFvmReIihEKYktw==
+  /@ceramicnetwork/pinning-powergate-backend/0.1.4:
     dependencies:
-      '@ceramicnetwork/common': 0.14.0
+      '@ceramicnetwork/common': 0.14.1
       '@stablelib/base64': 1.0.0
       '@stablelib/sha256': 1.0.0
       '@textile/powergate-client': 2.0.1
       lodash: 4.17.20
     dev: false
     resolution:
-      integrity: sha512-QmIPq9IYbLJTF1a8qoY8t0SqjSVcfyU4WQi1apoE1/3L7J39rRb3v0J4tnO03Yc8JjuqFeUqRIIbPaq8EjaIow==
+      integrity: sha512-ilt9IQQuFxs1Ahu6/fQu2dH05dIv8FmOHKGOrjScYsWaRU7GRDf3Zj3+8lKiGO2jYGVdD4ocK+I708QLyP/nbA==
   /@ceramicstudio/idx-constants/0.4.0:
     dev: false
     engines:
       node: '>=12'
     resolution:
       integrity: sha512-H8OeZNCyR88Vc1YQR35bZzUkGsKQUwf4v1oZQY7mJO2gOB3d6f8pMNBjvL08Q9H+zAzUtOKAIHZy8eebJXaG6A==
-  /@ceramicstudio/idx-tools/0.4.1:
+  /@ceramicstudio/idx-tools/0.4.2:
     dependencies:
       '@ceramicstudio/idx-constants': 0.4.0
       ajv: 6.12.6
@@ -551,7 +547,7 @@ packages:
     engines:
       node: '>=12'
     resolution:
-      integrity: sha512-S2TtfeV3rdi93t60vSeJNJhEi0p+QCUoQo+blJOA4TSgEhhvrbo9eFcxBD5QvKURoB+sCabITm3tGQf56RC3kQ==
+      integrity: sha512-uTcyCePZFtlgBTiZ8MVTXTnGM7b8kKNDvGx/wdq6KgxIv1QzqBay/vVhBqYrwJNQQIrEjLHufYW0IeekbikJlw==
   /@ceramicstudio/idx/0.4.2:
     dependencies:
       '@ceramicstudio/idx-constants': 0.4.0
@@ -815,26 +811,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-htsFhOD+NMBxx676A8ehSuwVV49iqpSB+CkjPZ02tpNew0K6p8g0CZ46Z1ZP946gIHAU80xQ0NACHYrjIUaCFA==
-  /@ethersproject/wallet/5.0.5:
-    dependencies:
-      '@ethersproject/abstract-provider': 5.0.5
-      '@ethersproject/abstract-signer': 5.0.6
-      '@ethersproject/address': 5.0.5
-      '@ethersproject/bignumber': 5.0.8
-      '@ethersproject/bytes': 5.0.5
-      '@ethersproject/hash': 5.0.5
-      '@ethersproject/hdnode': 5.0.5
-      '@ethersproject/json-wallets': 5.0.7
-      '@ethersproject/keccak256': 5.0.4
-      '@ethersproject/logger': 5.0.6
-      '@ethersproject/properties': 5.0.4
-      '@ethersproject/random': 5.0.4
-      '@ethersproject/signing-key': 5.0.5
-      '@ethersproject/transactions': 5.0.6
-      '@ethersproject/wordlists': 5.0.5
-    dev: false
-    resolution:
-      integrity: sha512-NbrKmsW3w+5dVOEyVCN5VAAIp3y8ckutW6AV7Lo0Hn8RO9mLT8ZFzLGp4lzgJoxkm+EV8BE+x1N6NdiOgUzRng==
   /@ethersproject/wallet/5.0.9:
     dependencies:
       '@ethersproject/abstract-provider': 5.0.5
@@ -906,7 +882,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-YNRCGMFDDP1xTzCK/O7mDqFtOt7YC+BVrmb5yJqc5LUJ/GcZkJqf53r+SafKxtsEr0P5A/ZrLrnn9FmfAw0hmQ==
-  /@glif/filecoin-wallet-provider/1.1.0-beta.7:
+  /@glif/filecoin-wallet-provider/1.1.0-beta.8:
     dependencies:
       '@babel/polyfill': 7.8.7
       '@glif/filecoin-address': 1.1.0-beta.7
@@ -916,18 +892,18 @@ packages:
       bignumber.js: 9.0.1
     dev: false
     resolution:
-      integrity: sha512-aPH0my6GyyN0qpzPh5HfUpTdS43VF2cMXBFllA+AOjcTxAgkIg6bU2JwjxXQ65D/IZI2LEa/yYdOhAms50/oaQ==
-  /@glif/local-managed-provider/1.1.0-beta.7:
+      integrity: sha512-AudkLfJAaptFuIoYmjyMwYu8rmAmYzWZhzhwdX0aAhm0pu2gUzzzDO/Q9Emqgeqcbel0CYRxFuRw9GwnRMa5Sw==
+  /@glif/local-managed-provider/1.1.0-beta.8:
     dependencies:
       '@glif/filecoin-address': 1.1.0-beta.7
       '@glif/filecoin-message': 1.1.0-beta.7
-      '@glif/filecoin-wallet-provider': 1.1.0-beta.7
+      '@glif/filecoin-wallet-provider': 1.1.0-beta.8
       '@zondax/filecoin-signing-tools': 0.12.0
       bignumber.js: 9.0.1
       uint8arrays: 1.1.0
     dev: false
     resolution:
-      integrity: sha512-/yNIi5tVx7Z2RRuT4u9pDA1jwkMnpDwgZ1cFXjzxioFjAs6Cmf+sSFU5LImSutQNjktULGNlwI64KYqS9WwUsQ==
+      integrity: sha512-GIKsQdG4boGZAdP73uZzYeRxFhuIbVgCkLABbmQecA0+xfbElfOqK2P3SScqyax6wKlCPOwrgWxkZYX9Ee3rmg==
   /@hapi/accept/5.0.1:
     dependencies:
       '@hapi/boom': 9.1.0
@@ -1261,7 +1237,7 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-Fogg3s4wlAr1VX7q+rhV9RVnUv5tD7VuWfYy1+whMiWUrvl7U3QJSJyWcDio9Lq2prqYsZaeTv2Rz24pWGkJ2A==
-  /@jest/core/26.6.3_ts-node@9.1.0:
+  /@jest/core/26.6.3_ts-node@9.1.1:
     dependencies:
       '@jest/console': 26.6.2
       '@jest/reporters': 26.6.2
@@ -1274,14 +1250,14 @@ packages:
       exit: 0.1.2
       graceful-fs: 4.2.4
       jest-changed-files: 26.6.2
-      jest-config: 26.6.3_ts-node@9.1.0
+      jest-config: 26.6.3_ts-node@9.1.1
       jest-haste-map: 26.6.2
       jest-message-util: 26.6.2
       jest-regex-util: 26.0.0
       jest-resolve: 26.6.2
       jest-resolve-dependencies: 26.6.3
-      jest-runner: 26.6.3_ts-node@9.1.0
-      jest-runtime: 26.6.3_ts-node@9.1.0
+      jest-runner: 26.6.3_ts-node@9.1.1
+      jest-runtime: 26.6.3_ts-node@9.1.1
       jest-snapshot: 26.6.2
       jest-util: 26.6.2
       jest-validate: 26.6.2
@@ -1466,13 +1442,13 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-6qqsU4o0kW1dvA95qfNog8v8gkRN9ph6Lz7r96IvZpHdNipP2cBcb07J1Z45mz/VIS01OHJ3pY8T5fUY38tg4A==
-  /@jest/test-sequencer/26.6.3_ts-node@9.1.0:
+  /@jest/test-sequencer/26.6.3_ts-node@9.1.1:
     dependencies:
       '@jest/test-result': 26.6.2
       graceful-fs: 4.2.4
       jest-haste-map: 26.6.2
-      jest-runner: 26.6.3_ts-node@9.1.0
-      jest-runtime: 26.6.3_ts-node@9.1.0
+      jest-runner: 26.6.3_ts-node@9.1.1
+      jest-runtime: 26.6.3_ts-node@9.1.1
     dev: true
     engines:
       node: '>= 10.14.2'
@@ -1563,6 +1539,69 @@ packages:
     dev: false
     resolution:
       integrity: sha512-eMk0b9ReBbV23xXU693TAIrLyeO5iTgBZGSJfpqriG8UkYvr/hC9u9pyMlAakDNHWmbhMZCDs6KQO0jzKD8OTw==
+  /@polkadot/networks/3.7.1:
+    dependencies:
+      '@babel/runtime': 7.12.5
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-kBPUxt3d1xXeJaFilyVI717TKOZJko/3pvFIDqbSc0i2qdXv8bmRR5r7KMnEB7MvTeMPKHVhcesWksAIdsYRew==
+  /@polkadot/util-crypto/3.7.1:
+    dependencies:
+      '@babel/runtime': 7.12.5
+      '@polkadot/networks': 3.7.1
+      '@polkadot/util': 3.7.1
+      '@polkadot/wasm-crypto': 1.4.1_@polkadot+util@3.7.1
+      base-x: 3.0.8
+      blakejs: 1.1.0
+      bn.js: 5.1.3
+      create-hash: 1.2.0
+      elliptic: 6.5.3
+      js-sha3: 0.8.0
+      pbkdf2: 3.1.1
+      scryptsy: 2.1.0
+      tweetnacl: 1.0.3
+      xxhashjs: 0.2.2
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-ZxQa10bo85YlxfS8ieDUzmFZMkKWwOp2dGQ0Xy94e4VBkWVPq9JjAfm8RnLy6D7k5KvMhzKuzJk7IcBDDdXGSw==
+  /@polkadot/util/3.7.1:
+    dependencies:
+      '@babel/runtime': 7.12.5
+      '@polkadot/x-textdecoder': 3.7.1
+      '@polkadot/x-textencoder': 3.7.1
+      '@types/bn.js': 4.11.6
+      bn.js: 5.1.3
+      camelcase: 5.3.1
+      ip-regex: 4.2.0
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-nvgzAbT/a213mpUd56YwK/zgbGKcQoMNLTmqcBHn1IP9u5J9XJcb1zPzqmCTg6mqnjrsgzJsWml9OpQftrcB6g==
+  /@polkadot/wasm-crypto/1.4.1_@polkadot+util@3.7.1:
+    dependencies:
+      '@polkadot/util': 3.7.1
+    dev: false
+    optional: true
+    peerDependencies:
+      '@polkadot/util': '*'
+    resolution:
+      integrity: sha512-GPBCh8YvQmA5bobI4rqRkUhrEHkEWU1+lcJVPbZYsa7jiHFaZpzCLrGQfiqW/vtbU1aBS2wmJ0x1nlt33B9QqQ==
+  /@polkadot/x-textdecoder/3.7.1:
+    dependencies:
+      '@babel/runtime': 7.12.5
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-GztrO7O880GR7C64PK30J7oLm+88OMxAUVW35njE+9qFUH6MGEKbtaLGUSn0JLCCtSme2f1i7DZ+1Pdbqowtnw==
+  /@polkadot/x-textencoder/3.7.1:
+    dependencies:
+      '@babel/runtime': 7.12.5
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-39jwEu+gok8hFl/UqBr6WDhSeSr4qblriwM++2Vwrw/298hd5uQ7xtJNZKdrbrPCkExPZhrxwVg/mJTHBpwSng==
   /@protobufjs/aspromise/1.1.2:
     dev: false
     resolution:
@@ -1727,10 +1766,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-qvUu5SraAdGa8HAkAasfMyD9C+MwlRnFVRJ6cRxAEIekmDsU3tfGLnUm3wb9ao4t0FkihGrj8GKlV82TTR4Phw==
-  /@stablelib/utf8/1.0.0:
-    dev: false
-    resolution:
-      integrity: sha512-Y8QWrK4T0yW0HMFfSI3ZaMHKV37q27hX5ilsmKV358x01mzYfj5fwIf2LjzTlF+UIemHEXSlSN9XJnv1ML4znQ==
   /@stablelib/wipe/1.0.0:
     dev: false
     resolution:
@@ -1819,6 +1854,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-1TdA9IXOy4sdqn8vgieQ6GZAiHiPNrOiO1s2GJjuYPw4QVY7gYoVjkW049avj33Ez7IcIvu43hQsMsoUFbCn2g==
+  /@types/bn.js/4.11.6:
+    dependencies:
+      '@types/node': 14.11.10
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-pqr857jrp2kPuO9uRjZ3PwnJTjoQy+fcdxvBTvHm6dkmEL9q+hDD/2j/0ELOBPtPnS8LjCX0gI9nbl8lVkadpg==
   /@types/debug/4.1.5:
     resolution:
       integrity: sha512-Q1y515GcOdTHgagaVFhHnIFQ38ygs/kmxdNpvpou+raI9UO3YZcHDngBSYKQklcKlvA7iuQlmIKbzvmxcOE9CQ==
@@ -1866,6 +1908,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Gp12+7tmKCgv9JjtltxUXokohCAEZfpJaEW5tn871SGRp8I+bRWBonQO7vW5NHwnAHe5dd50+Q4zyKuN35i09g==
+  /@types/jest/26.0.18:
+    dependencies:
+      jest-diff: 26.6.2
+      pretty-format: 26.6.2
+    dev: true
+    resolution:
+      integrity: sha512-scDPs+mELZgsFetTgBSsIxKGrlitn9t/d2ecP+S1QSIGD+31fkMBEftLfOAX5k3tU06/0PjreJIQ+gWEbbHqpw==
   /@types/lodash.clonedeep/4.5.6:
     dependencies:
       '@types/lodash': 4.14.165
@@ -3140,6 +3189,11 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-AZL67abkUzIuvcHqk7c09cezpGNcxUxU4Ioi/05xHk4DQeTkWmGYftIE6ctU6AEt+Gn4n1lDStOtj7FKycP71A==
+  /cuint/0.2.2:
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha1-QICG1AlVDCYxFVYZ6fp7ytw7mRs=
   /dag-cbor-links/2.0.2:
     dependencies:
       cids: 1.0.2
@@ -3391,22 +3445,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ZIzRpLJrOj7jjP2miAtgqIfmzbxa4ZOr5jJc601zklsfEx9oTzmmj2nVpIPRpNlRTIh8lc1kyViIY7BWSGNmKw==
-  /did-jwt/4.6.2:
-    dependencies:
-      '@babel/runtime': 7.12.1
-      '@stablelib/ed25519': 1.0.1
-      '@stablelib/random': 1.0.0
-      '@stablelib/sha256': 1.0.0
-      '@stablelib/utf8': 1.0.0
-      '@stablelib/x25519': 1.0.0
-      '@stablelib/xchacha20poly1305': 1.0.0
-      did-resolver: 2.1.1
-      elliptic: 6.5.3
-      js-sha3: 0.8.0
-      uint8arrays: 1.1.0
-    dev: false
-    resolution:
-      integrity: sha512-T77RnUjhhEvwusQ8gxaMqGekyYjpgaZoq6HM3zEkVH7LA5otasqa5XZpbsxeaGgyT7e9sXeofNNzBWvSZM3G2g==
   /did-jwt/4.7.0:
     dependencies:
       '@babel/runtime': 7.12.5
@@ -4598,7 +4636,7 @@ packages:
       it-all: 1.0.4
       it-map: 1.0.4
       it-peekable: 1.0.1
-      multiaddr: 8.0.0
+      multiaddr: 8.1.1
       multiaddr-to-uri: 6.0.0
       parse-duration: 0.4.4
       timeout-abort-controller: 1.1.1
@@ -4626,7 +4664,7 @@ packages:
       ipfs-block-service: 0.18.0
       ipfs-core-utils: 0.5.3
       ipfs-repo: 7.0.0
-      ipfs-unixfs: 2.0.3
+      ipfs-unixfs: 2.0.4
       ipfs-unixfs-exporter: 3.0.4
       ipfs-unixfs-importer: 4.0.0
       ipfs-utils: 5.0.1
@@ -4658,7 +4696,7 @@ packages:
       mafmt: 8.0.0
       merge-options: 2.0.0
       mortice: 2.0.0
-      multiaddr: 8.0.0
+      multiaddr: 8.1.1
       multiaddr-to-uri: 6.0.0
       multibase: 3.0.1
       multicodec: 2.0.1
@@ -4695,7 +4733,7 @@ packages:
       it-to-stream: 0.1.2
       merge-options: 2.0.0
       multiaddr: 8.1.1_node-fetch@2.6.1
-      multiaddr-to-uri: 6.0.0
+      multiaddr-to-uri: 6.0.0_node-fetch@2.6.1
       multibase: 3.0.1
       multicodec: 2.0.1
       multihashes: 3.0.1
@@ -4728,7 +4766,7 @@ packages:
       it-tar: 1.2.2
       it-to-stream: 0.1.2
       merge-options: 2.0.0
-      multiaddr: 8.0.0
+      multiaddr: 8.1.1
       multibase: 3.0.1
       multicodec: 2.0.1
       multihashes: 3.0.1
@@ -4800,7 +4838,7 @@ packages:
       cids: 1.0.2
       err-code: 2.0.3
       hamt-sharding: 1.0.0
-      ipfs-unixfs: 2.0.3
+      ipfs-unixfs: 2.0.4
       ipfs-utils: 3.0.0
       it-last: 1.0.4
       multihashing-async: 2.0.1
@@ -4832,16 +4870,6 @@ packages:
       npm: '>=4.0.0'
     resolution:
       integrity: sha512-ybTcgjNBaB6azQz8jJYESweATJFoc6D+Xo8USM0GahRx9xlFS+4qjnmGbC6H9RcFFt81amcP/P1zX9v83wo3cA==
-  /ipfs-unixfs/2.0.3:
-    dependencies:
-      err-code: 2.0.3
-      protons: 2.0.0
-    dev: false
-    engines:
-      node: '>=10.0.0'
-      npm: '>=4.0.0'
-    resolution:
-      integrity: sha512-WpzG/VTqWBPh1cYW3CXk2naElYO3xU0rJnL3SBHbviZ6ZeHRadxR5k0v3/yxPuygs2AwBhaLqBNlV6uB6OCiQw==
   /ipfs-unixfs/2.0.4:
     dependencies:
       err-code: 2.0.3
@@ -5177,7 +5205,7 @@ packages:
       cids: 1.0.2
       iso-url: 0.4.7
       mafmt: 8.0.0
-      multiaddr: 8.0.0
+      multiaddr: 8.1.1
       multibase: 3.0.1
       multihashes: 3.0.1
       uint8arrays: 1.1.0
@@ -5651,9 +5679,9 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-+VLRKyitT3BWoMeSUIHRxV/2g8y9gw91Jh5z2UmXZzkZKpbC08CSehVxgHUwTpy+HwGcns/tqafQDJW7imYvGg==
-  /jest-cli/26.6.3_ts-node@9.1.0:
+  /jest-cli/26.6.3_ts-node@9.1.1:
     dependencies:
-      '@jest/core': 26.6.3_ts-node@9.1.0
+      '@jest/core': 26.6.3_ts-node@9.1.1
       '@jest/test-result': 26.6.2
       '@jest/types': 26.6.2
       chalk: 4.1.0
@@ -5661,7 +5689,7 @@ packages:
       graceful-fs: 4.2.4
       import-local: 3.0.2
       is-ci: 2.0.0
-      jest-config: 26.6.3_ts-node@9.1.0
+      jest-config: 26.6.3_ts-node@9.1.1
       jest-util: 26.6.2
       jest-validate: 26.6.2
       prompts: 2.3.2
@@ -5698,10 +5726,10 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-RATtQJtVYQrp7fvWg6f5y3pEFj9I+H8sWw4aKxnDZ96mob5i5SD6ZEGWgMLXQ4LE8UurrjbdlLWdUeo+28QpfQ==
-  /jest-config/26.6.3_ts-node@9.1.0:
+  /jest-config/26.6.3_ts-node@9.1.1:
     dependencies:
       '@babel/core': 7.12.3
-      '@jest/test-sequencer': 26.6.3_ts-node@9.1.0
+      '@jest/test-sequencer': 26.6.3_ts-node@9.1.1
       '@jest/types': 26.6.2
       babel-jest: 26.6.3_@babel+core@7.12.3
       chalk: 4.1.0
@@ -5711,14 +5739,14 @@ packages:
       jest-environment-jsdom: 26.6.2
       jest-environment-node: 26.6.2
       jest-get-type: 26.3.0
-      jest-jasmine2: 26.6.3_ts-node@9.1.0
+      jest-jasmine2: 26.6.3_ts-node@9.1.1
       jest-regex-util: 26.0.0
       jest-resolve: 26.6.2
       jest-util: 26.6.2
       jest-validate: 26.6.2
       micromatch: 4.0.2
       pretty-format: 26.6.2
-      ts-node: 9.1.0_typescript@4.1.2
+      ts-node: 9.1.1_typescript@4.1.2
     dev: true
     engines:
       node: '>= 10.14.2'
@@ -5931,7 +5959,7 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-Cq7vkAgaYKp+PsX+2/JbTarrk0DmNhsEtqBXNwUHkdlbrTBLtMJINADf2mf5FkowNsq8evbPc07/qFO0AdKTzw==
-  /jest-jasmine2/26.6.3_ts-node@9.1.0:
+  /jest-jasmine2/26.6.3_ts-node@9.1.1:
     dependencies:
       '@babel/traverse': 7.12.1
       '@jest/environment': 26.6.2
@@ -5946,7 +5974,7 @@ packages:
       jest-each: 26.6.2
       jest-matcher-utils: 26.6.2
       jest-message-util: 26.6.2
-      jest-runtime: 26.6.3_ts-node@9.1.0
+      jest-runtime: 26.6.3_ts-node@9.1.1
       jest-snapshot: 26.6.2
       jest-util: 26.6.2
       pretty-format: 26.6.2
@@ -6157,7 +6185,7 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-KksJQyI3/0mhcfspnxxEOBueGrd5E4vV7ADQLT9ESaCzz02WnbdbKWIf5Mkaucoaj7obQckYPVX6JJhgUcoWWg==
-  /jest-runner/26.6.3_ts-node@9.1.0:
+  /jest-runner/26.6.3_ts-node@9.1.1:
     dependencies:
       '@jest/console': 26.6.2
       '@jest/environment': 26.6.2
@@ -6168,13 +6196,13 @@ packages:
       emittery: 0.7.2
       exit: 0.1.2
       graceful-fs: 4.2.4
-      jest-config: 26.6.3_ts-node@9.1.0
+      jest-config: 26.6.3_ts-node@9.1.1
       jest-docblock: 26.0.0
       jest-haste-map: 26.6.2
       jest-leak-detector: 26.6.2
       jest-message-util: 26.6.2
       jest-resolve: 26.6.2
-      jest-runtime: 26.6.3_ts-node@9.1.0
+      jest-runtime: 26.6.3_ts-node@9.1.1
       jest-util: 26.6.2
       jest-worker: 26.6.2
       source-map-support: 0.5.19
@@ -6217,7 +6245,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-8oNqgnmF3v2J6PVRM2Jfuj8oX3syKmaynlDMMKQ4iyzbQzIG6th5ub/lM2bCMTmoTKM3ykcUYI2Pw9xwNtjMnw==
-  /jest-runtime/26.6.3_ts-node@9.1.0:
+  /jest-runtime/26.6.3_ts-node@9.1.1:
     dependencies:
       '@jest/console': 26.6.2
       '@jest/environment': 26.6.2
@@ -6234,7 +6262,7 @@ packages:
       exit: 0.1.2
       glob: 7.1.6
       graceful-fs: 4.2.4
-      jest-config: 26.6.3_ts-node@9.1.0
+      jest-config: 26.6.3_ts-node@9.1.1
       jest-haste-map: 26.6.2
       jest-message-util: 26.6.2
       jest-mock: 26.6.2
@@ -6440,11 +6468,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-YvkBL1Zm7d2B1+h5fHEOdyjCG+sGMz4f8D86/0HiqJ6MB4MnDc8FgP5vdWsGnemOQro7lnYo8UakZ3+5A0jxGw==
-  /jest/26.6.3_ts-node@9.1.0:
+  /jest/26.6.3_ts-node@9.1.1:
     dependencies:
-      '@jest/core': 26.6.3_ts-node@9.1.0
+      '@jest/core': 26.6.3_ts-node@9.1.1
       import-local: 3.0.2
-      jest-cli: 26.6.3_ts-node@9.1.0
+      jest-cli: 26.6.3_ts-node@9.1.1
     dev: true
     engines:
       node: '>= 10.14.2'
@@ -6833,7 +6861,7 @@ packages:
     dependencies:
       debug: 4.3.1
       mafmt: 8.0.0
-      multiaddr: 8.0.0
+      multiaddr: 8.1.1
       peer-id: 0.14.2
     dev: false
     engines:
@@ -6999,7 +7027,7 @@ packages:
       libp2p-crypto: 0.18.0
       libp2p-interfaces: 0.4.1
       libp2p-record: 0.9.0
-      multiaddr: 8.0.0
+      multiaddr: 8.1.1
       multihashing-async: 2.0.1
       p-filter: 2.1.0
       p-map: 4.0.0
@@ -7022,7 +7050,7 @@ packages:
   /libp2p-mdns/0.15.0:
     dependencies:
       debug: 4.3.1
-      multiaddr: 8.0.0
+      multiaddr: 8.1.1
       multicast-dns: 7.2.2
       peer-id: 0.14.2
     dev: false
@@ -7078,7 +7106,7 @@ packages:
       err-code: 2.0.3
       libp2p-utils: 0.2.1
       mafmt: 8.0.0
-      multiaddr: 8.0.0
+      multiaddr: 8.1.1
       stream-to-it: 0.2.2
     dev: false
     engines:
@@ -7124,7 +7152,7 @@ packages:
       mafmt: 8.0.0
       menoetius: 0.0.2
       minimist: 1.2.5
-      multiaddr: 8.0.0
+      multiaddr: 8.1.1
       p-defer: 3.0.0
       peer-id: 0.14.2
       prom-client: 12.0.0
@@ -7148,7 +7176,7 @@ packages:
       it-ws: 3.0.2
       libp2p-utils: 0.2.1
       mafmt: 8.0.0
-      multiaddr: 8.0.0
+      multiaddr: 8.1.1
       multiaddr-to-uri: 6.0.0
       p-timeout: 3.2.0
     dev: false
@@ -7319,7 +7347,7 @@ packages:
       integrity: sha1-81ypHEk/e3PaDgdJUwTxezH4fuU=
   /mafmt/8.0.0:
     dependencies:
-      multiaddr: 8.0.0
+      multiaddr: 8.1.1
     dev: false
     resolution:
       integrity: sha512-MdaeaqZxjoYYWvlhr1GQ7sbsR3+L3s8QL0VtCuja+Iax3EhqAEgluSWPJezSDLyns7Ds4DGRyoq5+eIU7UDang==
@@ -7533,21 +7561,18 @@ packages:
       integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
   /multiaddr-to-uri/6.0.0:
     dependencies:
-      multiaddr: 8.0.0
+      multiaddr: 8.1.1
     dev: false
     resolution:
       integrity: sha512-OjpkVHOXEmIKMO8WChzzQ7aZQcSQX8squxmvtDbRpy7/QNmJ3Z7jv6qyD74C28QtaeNie8O8ngW2AkeiMmKP7A==
-  /multiaddr/8.0.0:
+  /multiaddr-to-uri/6.0.0_node-fetch@2.6.1:
     dependencies:
-      cids: 1.0.2
-      class-is: 1.1.0
-      is-ip: 3.1.0
-      multibase: 3.0.1
-      uint8arrays: 1.1.0
-      varint: 5.0.2
+      multiaddr: 8.1.1_node-fetch@2.6.1
     dev: false
+    peerDependencies:
+      node-fetch: '*'
     resolution:
-      integrity: sha512-4OOyr0u0i4lvh9MY/mvuCNmH5eqoTamcnGeXz6umFGc0eaVQUGPDQNbp52YfFY92NlZ76pO6h4K2HkXsT5X43w==
+      integrity: sha512-OjpkVHOXEmIKMO8WChzzQ7aZQcSQX8squxmvtDbRpy7/QNmJ3Z7jv6qyD74C28QtaeNie8O8ngW2AkeiMmKP7A==
   /multiaddr/8.1.1:
     dependencies:
       cids: 1.0.2
@@ -8941,6 +8966,11 @@ packages:
     dev: false
     resolution:
       integrity: sha512-cdwTTnqPu0Hyvf5in5asVdZocVDTNRmR7XEcJuIzMjJeSHybHl7vpB66AzwTaIg6CLSbtjcxc8fqcySfnTkccA==
+  /scryptsy/2.1.0:
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-1CdSqHQowJBnMAFyPEBRfqag/YP9OF394FV+4YREIJX4ljD7OxvQRDayyoyyCk+senRjSkP6VnUNQmVQqB6g7w==
   /secp256k1/4.0.2:
     dependencies:
       elliptic: 6.5.3
@@ -9695,7 +9725,7 @@ packages:
       bs-logger: 0.2.6
       buffer-from: 1.1.1
       fast-json-stable-stringify: 2.1.0
-      jest: 26.6.3_ts-node@9.1.0
+      jest: 26.6.3_ts-node@9.1.1
       jest-util: 26.6.0
       json5: 2.1.3
       lodash.memoize: 4.1.2
@@ -9713,7 +9743,7 @@ packages:
       typescript: '>=3.8 <5.0'
     resolution:
       integrity: sha512-3lFWKbLxJm34QxyVNNCgXX1u4o/RV0myvA2y2Bxm46iGIjKlaY0own9gIckbjZJPn+WaJEnfPPJ20HHGpoq4yg==
-  /ts-node/9.1.0_typescript@4.1.2:
+  /ts-node/9.1.1_typescript@4.1.2:
     dependencies:
       arg: 4.1.3
       create-require: 1.1.1
@@ -9729,7 +9759,7 @@ packages:
     peerDependencies:
       typescript: '>=2.7'
     resolution:
-      integrity: sha512-0yqcL4sgruCvM+w64LiAfNJo6+lHfCYc5Ajj4yiLNkJ9oZ2HWaa+Kso7htYOOxVQ7+csAjdUjffOe9PIqC4pMg==
+      integrity: sha512-hPlt7ZACERQGf03M253ytLY3dHbGNGrAq9qIHWUY9XHYl1z7wYngSr3OQ5xmui8o2AaxsONxIzjafLUiWBo1Fg==
   /tunnel-agent/0.6.0:
     dependencies:
       safe-buffer: 5.2.1
@@ -9738,6 +9768,11 @@ packages:
   /tweetnacl/0.14.5:
     resolution:
       integrity: sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
+  /tweetnacl/1.0.3:
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==
   /type-check/0.3.2:
     dependencies:
       prelude-ls: 1.1.2
@@ -10169,6 +10204,13 @@ packages:
       node: '>=0.4'
     resolution:
       integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
+  /xxhashjs/0.2.2:
+    dependencies:
+      cuint: 0.2.2
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-AkTuIuVTET12tpsVIQo+ZU6f/qDmKuRUcjaqR+OIvm+aCBsZ95i7UVY5WJ9TMsSaZ0DA2WxoZ4acu0sPH+OKAw==
   /y18n/4.0.0:
     resolution:
       integrity: sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==
@@ -10248,18 +10290,18 @@ packages:
     resolution:
       integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
 specifiers:
-  3id-blockchain-utils: ^1.1.1
-  3id-did-provider: ^0.1.1
-  '@ceramicnetwork/cli': ^0.16.0
-  '@ceramicnetwork/common': ^0.14.0
-  '@ceramicnetwork/http-client': ^0.8.5
+  3id-blockchain-utils: ^1.2.0
+  3id-did-provider: ^0.1.2
+  '@ceramicnetwork/cli': ^0.16.2
+  '@ceramicnetwork/common': ^0.14.1
+  '@ceramicnetwork/http-client': ^0.8.7
   '@ceramicstudio/idx': ^0.4.2
-  '@ceramicstudio/idx-tools': ^0.4.1
+  '@ceramicstudio/idx-tools': ^0.4.2
   '@glif/filecoin-address': ^1.1.0-beta.7
-  '@glif/filecoin-wallet-provider': ^1.1.0-beta.7
-  '@glif/local-managed-provider': ^1.1.0-beta.7
+  '@glif/filecoin-wallet-provider': ^1.1.0-beta.8
+  '@glif/local-managed-provider': ^1.1.0-beta.8
   '@types/debug': ^4.1.5
-  '@types/jest': ^26.0.16
+  '@types/jest': ^26.0.18
   '@types/lodash': ^4.14.165
   '@zondax/filecoin-signing-tools': ^0.13.0
   caip: ^0.9.2
@@ -10269,5 +10311,5 @@ specifiers:
   lodash: ^4.17.20
   prettier: ^2.2.1
   ts-jest: ^26.4.4
-  ts-node: ^9.1.0
+  ts-node: ^9.1.1
   typescript: ^4.1.2
