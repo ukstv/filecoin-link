@@ -15,7 +15,10 @@
     "3box",
     "caip10-link",
     "caip10",
-    "idx"
+    "idx",
+    "filecoin",
+    "filecoin-link",
+    "ceramic"
   ],
   "author": "Sergey Ukustov <sergey@ukstv.me>",
   "license": "(Apache-2.0 OR MIT)",
